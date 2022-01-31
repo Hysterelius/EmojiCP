@@ -140,7 +140,7 @@ function prepareCanvas(doUpdate) {
 
 
         drawInlineSVG(ctx, editSVG(currentEmoji["source"]), function() {
-        })
+        });
 
     }
 }
