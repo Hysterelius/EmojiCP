@@ -1,0 +1,103 @@
+
+h1 {
+    color: black;
+    text-align: center;
+    font-size: 30px;
+}
+
+* {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+emoji-picker {
+    --emoji-size: 1.5rem;
+}
+
+.border {
+    padding: 0 0;
+    margin: 0;
+    border-radius: 0;
+    position: relative;
+    z-index: 1;
+    background-color: rgb(255, 255, 255);
+}
+
+@media screen and (min-width: 520px) {
+    .border {
+        padding: 0.75em 1.75em;
+        border-radius: 25px;
+        border: black;
+        margin: 1%;
+        box-shadow: 10px 64px 200px 15px rgba(0, 0, 0, 0.5);
+    }
+
+    h1 {
+        color: black;
+        text-align: center;
+        font-size: 3vw;
+    }
+
+}
+
+@media screen and (max-width: 520px) {
+    emoji-picker {
+      --num-columns: 6;
+      --category-emoji-size: 1.125rem;
+      --emoji-size: 1.5rem;
+      width: 90%;
+    }
+}
+
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 40px 12em;
+    margin: auto 0 auto 5%;
+    justify-content: left;
+    align-items: flex-start;
+    z-index: 10;
+}
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+  }
+
+.range-wrap {
+    position: relative;
+    margin: 0 auto 3rem;
+}
+.range {
+    width: 100%;
+}
+.bubble {
+    background: #78909C;
+    color: white;
+    padding: 4px 12px;
+    position: absolute;
+    border-radius: 4px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.bubble::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: #78909C;
+    top: -1px;
+    left: 50%;
+}
+
+.© {
+    font-size: 0.9em;
+    color: gray;
+}

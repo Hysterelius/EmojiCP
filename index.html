@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EmojiCP</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="Assets/favicon.ico">
+</head>
+<body>
+    <div class="border">
+        <h1>Welcome to the Emoji Contact photo maker</h1>
+        
+
+        <div class="flex-container">
+            <div class="flex1">
+                <emoji-picker></emoji-picker>
+
+                <br>
+                <label for="Colour1">Colour 1 for gradient: </label> <input type="color" value="#858e96" oninput=changeColour1() id="Colour1"><br>
+                <label for="Colour2">Colour 2 for gradient: </label> <input type="color" value="#60696b" oninput=changeColour2() id="Colour2"><br><br>
+                
+                <div class="range-wrap">
+                    <label for="SizeControl">Size of image (300px-1200px): </label>
+                    <input type="range" class="range" min=100 max=400 step=50 value=100 oninput=changeSize() id="SizeControl">
+                    <output class="bubble"></output>
+                </div>
+
+                <!-- <label for="SizeControl">Size of image (100px-400px): </label> <input type="range" min=100 max=400 step=50 value=100 oninput=changeSize() id="SizeControl"><br><br> -->
+
+                <input type="button" value="Download" onclick="downloadCanvas()">
+
+                <h4 style="color: gray;">Copyright</h4>
+                <p class="©">
+                    Emojis © <a href="https://github.com/twitter/twemoji">Twitter</a> under their <a href="https://creativecommons.org/licenses/by/4.0/legalcode">respective license.</a>
+                </p>
+
+                <br><br>
+            </div>
+            <div class="flex2">
+                <canvas id="myCanvas" width="384" height="384" name="Canvas with no emoji"
+                style="border:1px solid #d3d3d3;">
+                Your browser does not support the HTML canvas tag.</canvas>
+                <!-- Old canvas width was 384 -->
+            </div>
+
+            <!-- <i class="bi-alarm"></i> -->
+        </div>
+    </div>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/emoji-picker-element@^1/index.js"></script>
+
+    <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+
+    <script src="emojiCode.js"></script>
+
+</body>
+</html>
