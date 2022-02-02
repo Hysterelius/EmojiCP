@@ -1,3 +1,4 @@
+![LGTM grade for JavaScipt](https://img.shields.io/lgtm/grade/javascript/github/Hystersis/EmojiCP)
 # Emoji CP
 <img align="right" src="Assets\ContactPhotoExample.jpg" width=400px>
 Everyone in my contacts is an emoji, I use this emoji to describe them to me. So, I made a simple program that allows for the creation and downloading of these emoji contact photos.
